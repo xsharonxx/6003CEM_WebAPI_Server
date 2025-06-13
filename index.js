@@ -27,7 +27,7 @@ app.use((req, res) => res.status(404).json({ error: 'Route not found' }));
 // Create HTTP server _after_ app exists
 const server = http.createServer(app);
 
-// Attach socket.io to same HTTP server
+// Attach .io to same HTTP server
 const io = new Server(server, { cors: { origin: '*' } });
 
 io.on('connection', (socket) => {
